@@ -8,3 +8,6 @@ git pull
 cd ..
 git add C-Plus-Utilities
 git commit -m "Upgraded Utilities to version XYZ"
+
+For detailed look at Makefile please see:
+http://www.partow.net/programming/makefile/index.html
