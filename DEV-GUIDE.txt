@@ -10,4 +10,10 @@ git add C-Plus-Utilities
 git commit -m "Upgraded Utilities to version XYZ"
 
 For detailed look at Makefile please see:
+<Commands>
+Make clean -> Cleans /build/ directory
+Make debug -> Debug compiliation, allows the DEBUG preprocessor flag (i.e. #if DEBUG)
+Make run -> Makes a debug compiliation and executes the mainfile (program)
+Make info -> Print information about files in the compiliation scope
+
 http://www.partow.net/programming/makefile/index.html
