@@ -1,0 +1,10 @@
+DEVELOPER GUIDE:
+
+When changing C-Plus-Utilities, the changes should be made directly in the C-Plus-Utilities repository.
+This repository is then updated by doing:
+
+cd /path/to/Majora_C2B2B/C-Plus-Utilities
+git pull
+cd ..
+git add C-Plus-Utilities
+git commit -m "Upgraded Utilities to version XYZ"
