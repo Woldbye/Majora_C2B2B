@@ -1,3 +1,0 @@
-[submodule "include/utilities"]
-	path = include/external/utilities/
-	url = https://github.com/Woldbye/C-Plus-Utilities.git
