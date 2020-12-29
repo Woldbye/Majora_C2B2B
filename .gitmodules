@@ -1,4 +1,0 @@
-[submodule "utilities4cpp"]
-	path = include/external/utilities
-	url = https://github.com/Woldbye/C-Plus-Utilities.git
-	branch = main

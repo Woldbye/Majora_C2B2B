@@ -6,11 +6,16 @@ OBJ_DIR  := $(BUILD)/objects
 APP_DIR  := $(BUILD)/apps
 INFO_DIR := ./info
 TARGET   := program
-INCLUDE  := -Iinclude/
-SRC      :=                      \
-   $(wildcard src/module1/*.cpp) \
-   $(wildcard src/module2/*.cpp) \
-   $(wildcard src/*.cpp)         \
+INCLUDE  :=                       \
+   $(wildcard include/*/*/*/*.hpp)\
+   $(wildcard include/*/*/*.hpp)  \
+   $(wildcard include/*/*.hpp)    \
+   $(wildcard include/*.hpp)      \
+
+SRC      :=                       \
+   $(wildcard src/*/*/*.cpp)      \
+   $(wildcard src/*/*.cpp)        \
+   $(wildcard src/*.cpp)          \
 
 OBJECTS  := $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 DEPENDENCIES \
@@ -20,7 +25,7 @@ all: build $(APP_DIR)/$(TARGET)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@
+	$(CXX) $(CXXFLAGS) -I $(INCLUDE) -c $< -MMD -o $@
 
 $(APP_DIR)/$(TARGET): $(OBJECTS)
 	@mkdir -p $(@D)
