@@ -6,11 +6,9 @@ OBJ_DIR  := $(BUILD)/objects
 APP_DIR  := $(BUILD)/apps
 INFO_DIR := ./info
 TARGET   := program
-INCLUDE  :=                       \
-   $(wildcard include/*/*/*/*.hpp)\
-   $(wildcard include/*/*/*.hpp)  \
-   $(wildcard include/*/*.hpp)    \
-   $(wildcard include/*.hpp)      \
+INCLUDE  :=                    \
+   $(wildcard include/**/*/)   \
+   $(wildcard include/)        \
 
 SRC      :=                       \
    $(wildcard src/*/*/*.cpp)      \
@@ -25,7 +23,7 @@ all: build $(APP_DIR)/$(TARGET)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) -I $(INCLUDE) -c $< -MMD -o $@
+	$(CXX) $(CXXFLAGS) -I$(INCLUDE) -c $< -MMD -o $@
 
 $(APP_DIR)/$(TARGET): $(OBJECTS)
 	@mkdir -p $(@D)
