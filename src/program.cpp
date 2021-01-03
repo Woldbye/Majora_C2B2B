@@ -1,8 +1,7 @@
 #include <iostream>
-#include "print.hpp"
+#include "binprint.hpp"
 
 int main() {
-    util::bin::Printer::ULongAsBin((unsigned long long int) 100);
-    std::cout << "Hello World!";
+    util::bin::Printer::UllAsBin((unsigned long long int) 100);
     return 0;
 }
