@@ -1,16 +1,16 @@
 CXX      := -c++
 CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror
-LDFLAGS  := -L/usr/lib -lstdc++ -lm 
+LDFLAGS  := -L/usr/lib -std=c++14 -lm 
 BUILD    := ./build
 OBJ_DIR  := $(BUILD)/objects
 APP_DIR  := $(BUILD)/apps
 INFO_DIR := ./info
 TARGET   := program
-INCLUDE  :=                    \
-   $(wildcard include/**/*/)   \
-   $(wildcard include/)        \
+#available paths for imports
+INCLUDE  := include/              \
 
 SRC      :=                       \
+   $(wildcard src/**/*/*.cpp)     \
    $(wildcard src/*/*/*.cpp)      \
    $(wildcard src/*/*.cpp)        \
    $(wildcard src/*.cpp)          \

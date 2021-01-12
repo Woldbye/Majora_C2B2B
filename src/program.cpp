@@ -1,7 +1,17 @@
+#include "util/typedef.hpp"
+#include "chess/definitions/chess_enums.hpp"
 #include <iostream>
-#include "binprint.hpp"
+
+using namespace std;
+using namespace util;
+using namespace chess::definitions;
 
 int main() {
-    util::bin::Printer::UllAsBin((unsigned long long int) 100);
+    // util::bin::Printer::UllAsBin((ull) 100);
+    Square x = Square::D5;
+    cout << "\n" << static_cast<ul>(x);
+    // cout << x  
+    // 
+    // 
     return 0;
 }
