@@ -38,6 +38,7 @@ build:
 	@mkdir -p $(OBJ_DIR)
 
 debug: CXXFLAGS += -DDEBUG -g
+debug: clean
 debug: all
 
 #debug run
