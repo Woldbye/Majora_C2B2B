@@ -1,20 +1,21 @@
 #include "chess/definitions/chess_enums.hpp"
 #include "util/typedef.hpp"
+#include <string>
 
 using namespace util;
+using namespace std;
 
 namespace chess
 {
     namespace definitions
     {
-        /*
-        TO:DO INIT THESE
         // Enum to str arrays
-        extern const util::string PIECE_TO_STR[static_cast<util::ul>(Piece::Count)];
-        extern const util::string FILE_TO_STR[static_cast<util::ul>(File::Count)];
-        extern const util::string RANK_TO_STR[static_cast<util::ul>(Rank::Count)];
-        extern const util::string COLOUR_TO_STR[static_cast<util::ul>(Rank::Count)];
-        extern const util::string SQUARE_TO_STR[static_cast<util::ul>(Square::Count)];
-        */
+        // const string PIECE_TO_STR[11] = { "None",
+        //                                                              "wP", "wN", "wB", "wR", "wQ", "wK",
+        //                                                              "bP", "bN", "bB", "bR", "bQ", "bK" };
+        // const string FILE_TO_STR[static_cast<ul>(File::Count)];
+        // const string RANK_TO_STR[static_cast<ul>(Rank::Count)];
+        // const string COLOUR_TO_STR[static_cast<ul>(Rank::Count)];
+        // const string SQUARE_TO_STR[static_cast<ul>(Square::Count)];
     }
 }
