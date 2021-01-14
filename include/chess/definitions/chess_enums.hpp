@@ -8,6 +8,8 @@ namespace chess
 {
     namespace definitions
     {
+        extern const util::ul BOARD_SIZE; // TO:DO move to another file
+
         enum class Piece : util::byte
         {
             None,
@@ -23,7 +25,7 @@ namespace chess
             bR,
             bQ,
             bK,
-            Count = bK - 1
+            Count = bK + 1
         };
       
 
@@ -39,7 +41,7 @@ namespace chess
             F,
             G,
             H,
-            Count = H - 1 // 8
+            Count = H + 1 // 9
         };
 
 
@@ -55,7 +57,7 @@ namespace chess
             _6,
             _7,
             _8,
-            Count = _8 - 1
+            Count = _8 + 1
         };
 
         // colours of the game.
@@ -65,7 +67,7 @@ namespace chess
             White,
             Black,
             Both,
-            Count = Both - 1 
+            Count = Both + 1
         };
 
         enum class Square : util::byte 
@@ -135,7 +137,7 @@ namespace chess
             F8,
             G8,
             H8,
-            Count = 64
+            Count = H8 + 1
         };
 
         // Enum to str arrays
@@ -143,7 +145,7 @@ namespace chess
         extern const std::string FILE_TO_STR[static_cast<util::ul>(File::Count)];
         extern const std::string RANK_TO_STR[static_cast<util::ul>(Rank::Count)];
         extern const std::string COLOUR_TO_STR[static_cast<util::ul>(Rank::Count)];
-        extern const std::string SQUARE_TO_STR[static_cast<util::ul>(Square::Count)];
+        extern const std::string* SQUARE_TO_STR;
     }
 }
 #endif // CHESS_ENUMS_HPP
