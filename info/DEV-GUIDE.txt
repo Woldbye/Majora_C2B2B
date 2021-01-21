@@ -17,3 +17,7 @@ Make run -> Makes a debug compiliation and executes the mainfile (program)
 Make info -> Print information about files in the compiliation scope
 
 http://www.partow.net/programming/makefile/index.html
+
+
+ADDITIONAL INFORMATION ABOUT CHESS PROGRAMMING:
+https://www.chessprogramming.org/

@@ -8,7 +8,7 @@ namespace chess
 {
     namespace definitions
     {
-        extern const util::ul BOARD_SIZE; // TO:DO move to another file
+        extern const util::U32 BOARD_SIZE; // TO:DO move to another file
 
         enum class Piece : util::byte
         {
@@ -27,7 +27,7 @@ namespace chess
             bK,
             Count = bK + 1
         };
-      
+        
 
         // The file on the board (a-h)
         enum class File : util::byte
@@ -137,14 +137,27 @@ namespace chess
             F8,
             G8,
             H8,
-            Count = H8 + 1
+            Count = 64 + 1
+        };
+
+        // works as flags, so we can keep castling in 4 bits. 
+        // 1 0 0 1 means white can castle kingside and black can castle queen side.
+        enum class Castling : util::byte 
+        {
+            None = 0,
+            WKCA = 1,
+            WQCA = 2,
+            BKCA = 4,
+            BQCA = 8,
+            Count = 4 + 1
         };
 
         // Enum to str arrays
-        extern const std::string PIECE_TO_STR[static_cast<util::ul>(Piece::Count)];
-        extern const std::string FILE_TO_STR[static_cast<util::ul>(File::Count)];
-        extern const std::string RANK_TO_STR[static_cast<util::ul>(Rank::Count)];
-        extern const std::string COLOUR_TO_STR[static_cast<util::ul>(Rank::Count)];
+        extern const std::string CASTLING_TO_STR[static_cast<util::U32>(Castling::Count)];
+        extern const std::string PIECE_TO_STR[static_cast<util::U32>(Piece::Count)];
+        extern const std::string FILE_TO_STR[static_cast<util::U32>(File::Count)];
+        extern const std::string RANK_TO_STR[static_cast<util::U32>(Rank::Count)];
+        extern const std::string COLOUR_TO_STR[static_cast<util::U32>(Rank::Count)];
         extern const std::string* SQUARE_TO_STR;
     }
 }

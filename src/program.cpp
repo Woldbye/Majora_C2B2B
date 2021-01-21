@@ -13,7 +13,7 @@ int main() {
     Init init = Init();
     init.initAll();
 
-    for (ul i = 0; i < BOARD_SIZE; i++)
+    for (U32 i = 0; i < BOARD_SIZE; i++)
         cout << SQUARE_TO_STR[i] << endl;
 
     // cout << x  
