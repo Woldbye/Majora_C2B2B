@@ -45,8 +45,9 @@ namespace chess
 
         /**
          * pop() pops the least significant bit in the bitboard (i.e. private var board_)
-         * 
-         * @return index (0..63) of least significant one bit (LS1B).
+         * @precondition bb != 0
+         * @return index (0..63) of least significant one bit
+         * @return index (0..63) of least significant one bit
          */
         util::U32 pop();  
 
